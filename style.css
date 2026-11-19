@@ -56,7 +56,6 @@ h1,h2,h3,p,figure,dl,dd{margin:0}
 .specimen{position:relative;align-self:start;margin-top:1.5rem;width:100%;height:clamp(25rem,33.6vw,31rem)}
 .specimen:before{content:"";position:absolute;z-index:-1;inset:7% 6%;background:radial-gradient(ellipse at 35% 63%,rgba(30,140,147,.12),transparent 47%),radial-gradient(ellipse at 68% 35%,rgba(119,101,194,.11),transparent 45%);filter:blur(14px)}
 .specimen .structure{position:absolute;inset:5% 0;width:100%;height:90%;object-fit:contain;mix-blend-mode:lighten;mask-image:radial-gradient(ellipse 74% 75% at center,#000 69%,transparent 100%);}
-.model-tools{display:flex;align-items:center;gap:.7rem}
 .motion-toggle{display:grid;place-items:center;pointer-events:auto;border:1px solid #405362;background:#111d25;color:#c4d4dc;border-radius:50%;width:2.15rem;height:2.15rem;padding:0}
 .motion-toggle:hover{color:var(--accent);border-color:var(--accent)}
 .motion-toggle .icon{width:.93rem;height:.93rem}
@@ -67,14 +66,9 @@ h1,h2,h3,p,figure,dl,dd{margin:0}
 .cross:before{height:1px;width:100%;left:0;top:5px}
 .cross:after{width:1px;height:100%;left:5px;top:0}
 .tl{top:0;left:0}.tr{top:0;right:0}.bl{bottom:0;left:0}.br{bottom:0;right:0}
-.specimen-head,.specimen figcaption{display:flex;position:absolute;align-items:center;justify-content:space-between;left:1.5rem;right:1.5rem;z-index:1;pointer-events:none;font:400 .78rem/1.25 var(--sans);letter-spacing:.02em}
+.specimen-head,.specimen figcaption{display:flex;position:absolute;align-items:center;justify-content:flex-end;left:1.5rem;right:1.5rem;z-index:1;pointer-events:none;font:400 .78rem/1.25 var(--sans);letter-spacing:.02em}
 .specimen-head{top:.75rem;color:#8ba1b2}
-.model-label{display:inline-flex;align-items:center;gap:.4rem}
-.model-label .icon{width:1.1rem;height:1.1rem;color:#9baebd}
 .specimen figcaption{bottom:.5rem;color:#a1b4c2}
-.specimen figcaption a{display:flex;align-items:center;gap:.45rem;padding:7px 8px;margin-left:-8px;pointer-events:auto;border-radius:4px;background:rgba(11,17,25,.74)}
-.specimen figcaption a:hover{color:#def7f3;text-decoration:underline}
-.specimen figcaption b{font-weight:400;color:#e8eef4}
 .legend{display:flex;align-items:center;gap:.8rem;color:#cbd7df}
 .legend>span{display:inline-flex;align-items:baseline;line-height:1}
 .legend i{align-self:center;display:block;width:.45rem;height:.45rem;border-radius:50%;margin-right:.3rem}
