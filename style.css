@@ -147,6 +147,7 @@ h1,h2,h3,p,figure,dl,dd{margin:0}
 .profile-panels:not(.tabbed):has(.profile-panel:target) .profile-panel:first-child:not(:target){display:none}
 .panel-heading{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .profile-bio{font-size:1rem;line-height:1.8;color:#c6d1da;max-width:36rem}
+.profile-bio + .profile-bio{margin-top:.65rem}
 html[lang=en] .profile-bio{line-height:1.6}
 .profile-links,.footer-links{display:flex;flex-wrap:wrap;gap:.45rem 1.15rem}
 .profile-links{margin-top:.7rem}
@@ -189,6 +190,7 @@ footer small{margin-left:1.3rem}
 .project-hero p{color:#c1cdd5;line-height:1.9}
 .project-visual{background:var(--panel);border:1px solid var(--line);border-radius:.55rem;overflow:hidden}
 .project-visual img{width:100%;height:auto;display:block}
+.project-visual .surface-figure{aspect-ratio:2.2;object-fit:cover}
 .project-visual figcaption{color:#a4b5c2;border-top:1px solid var(--line);padding:.6rem 1rem;font-size:.82rem}
 .project-visual .molecule-caption{display:flex;flex-wrap:wrap;align-items:baseline;gap:.15rem .8rem;padding:.7rem 1rem .8rem;line-height:1.5}
 .molecule-name{flex:1 1 auto;color:var(--text);font-size:.9rem;font-weight:600}
