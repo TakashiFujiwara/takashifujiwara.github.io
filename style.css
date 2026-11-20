@@ -161,7 +161,7 @@ html[lang=en] .profile-bio{line-height:1.6}
 .profile-panel .profile-highlights dt{font-size:1rem;color:var(--text);font-weight:600}
 .profile-highlights dd{margin-top:.15rem}
 .skill-heading{margin:0 0 .35rem;color:var(--text);font-size:1rem;font-weight:600}
-.skill-list+.skill-heading{margin-top:1.05rem;padding-top:.8rem;border-top:1px solid var(--line)}
+.skill-list+.skill-heading{margin-top:clamp(1.4rem,3vw,1.75rem);padding-top:.95rem;margin-bottom:.55rem;border-top:1px solid var(--line)}
 .skill-list{margin:0;padding-inline-start:1.3rem;line-height:1.6}
 .skill-list li+li{margin-top:.3rem}
 .skill-list li::marker{color:var(--accent)}
