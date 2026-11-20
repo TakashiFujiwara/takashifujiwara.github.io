@@ -88,9 +88,7 @@ h1,h2,h3,p,figure,dl,dd{margin:0}
 .news-list time{color:var(--muted);font-size:.83rem;white-space:nowrap}
 .news-list p{max-width:61rem;color:#d7dfe5;font-size:.92rem;overflow-wrap:anywhere}
 .news-list a{color:#c4e4e1;text-decoration:underline;text-decoration-color:#648783;text-underline-offset:.16em}
-.news-source{margin-top:.5rem;font-size:.8rem;color:var(--muted)}
-.news-source a{text-decoration:underline;text-underline-offset:.16em}
-.news-list a:hover,.news-source a:hover,.news-archive summary:hover{color:var(--accent)}
+.news-list a:hover,.news-archive summary:hover{color:var(--accent)}
 .news-archive{border-top:1px solid var(--line)}
 .news-archive summary{width:fit-content;padding:.6rem .15rem .1rem;cursor:pointer;color:#b9cfce;font-size:.87rem}
 .news-archive summary span{color:var(--muted)}
@@ -192,6 +190,11 @@ footer small{margin-left:1.3rem}
 .project-visual{background:var(--panel);border:1px solid var(--line);border-radius:.55rem;overflow:hidden}
 .project-visual img{width:100%;height:auto;display:block}
 .project-visual figcaption{color:#a4b5c2;border-top:1px solid var(--line);padding:.6rem 1rem;font-size:.82rem}
+.project-visual .molecule-caption{display:flex;flex-wrap:wrap;align-items:baseline;gap:.15rem .8rem;padding:.7rem 1rem .8rem;line-height:1.5}
+.molecule-name{flex:1 1 auto;color:var(--text);font-size:.9rem;font-weight:600}
+.molecule-caption a{color:var(--accent);font-size:.77rem;letter-spacing:.035em;text-decoration:underline;text-underline-offset:.16em;white-space:nowrap}
+.molecule-views{flex:1 0 100%}
+
 .related{border-top:1px solid var(--line);padding-top:2.6rem}
 @media(min-width:1550px){.hero-inner{min-height:40rem}.specimen{height:32rem}}
 @media(max-width:1030px){
