@@ -144,6 +144,20 @@ html[lang=en] .profile-bio{line-height:1.6}
 .profile-panel dt{font-size:.85rem;color:#a1bec1}
 .profile-panel dd{font-size:.98rem;color:#d3dce3}
 .profile-panel dd a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.conference-presentations h3{margin:0 0 .4rem;font-size:1rem;font-weight:600}
+.presentation-year{border-top:1px solid var(--line)}
+.presentation-year>summary{padding:.55rem .15rem;color:var(--accent);font-weight:600;cursor:pointer}
+.presentation-year>summary span{color:var(--muted);font-size:.84rem;font-weight:400}
+.presentation-year>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.presentation-list{list-style:none;margin:0;padding:0 0 .35rem}
+.presentation-list li{padding:.75rem 0;line-height:1.5;overflow-wrap:anywhere}
+.presentation-list li+li{border-top:1px solid var(--line)}
+.presentation-title{font-size:1rem;font-weight:600}
+.presentation-authors,.presentation-venue,.presentation-note{margin-top:.2rem;font-size:.875rem;color:var(--muted)}
+.presentation-authors strong{color:var(--text)}
+.presentation-venue a,.presentation-note a{text-decoration:underline;text-underline-offset:.18em}
+.presentation-venue a:hover,.presentation-note a:hover{color:var(--accent)}
+.presentation-note{color:var(--accent);font-weight:600}
 .career-group + .career-group{margin-top:1.3rem}
 .career-group h3{margin:0 0 .25rem;font-size:1rem;font-weight:600;color:var(--text)}
 .career-group dl>div{grid-template-columns:10.25rem minmax(0,1fr);padding:.55rem 0}
