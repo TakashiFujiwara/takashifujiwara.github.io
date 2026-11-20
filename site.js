@@ -24,7 +24,7 @@ matchMedia('(min-width: 761px)').addEventListener('change', event => {
 });
 if (isListing) {
   const sectionLinks = Array.from(document.querySelectorAll('[data-section]'));
-  const sections = ['profile', 'research', 'publications'].map(id => document.getElementById(id));
+  const sections = ['profile', 'news', 'research', 'publications'].map(id => document.getElementById(id));
   const langLinks = Array.from(document.querySelectorAll('[data-lang]'));
   const profileTabs = document.querySelector('.profile-tabs');
   const tabs = Array.from(profileTabs.querySelectorAll('[role="tab"]'));
