@@ -143,14 +143,14 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
 .profile-bio { max-width: 68ch; line-height: 1.95; }
 .profile-bio + .profile-bio { margin-top: .6rem; }
 :lang(en) > .profile-bio { line-height: 1.75; }
-.profile-panel a, .structure-source {
+.profile-panel a {
   color: var(--accent);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-decoration-color: #9aada1;
   text-underline-offset: .19em;
 }
-.profile-panel a:hover, .structure-source:hover { text-decoration-color: currentColor; }
+.profile-panel a:hover { text-decoration-color: currentColor; }
 .profile-links { display: flex; flex-wrap: wrap; gap: .35rem 1.15rem; margin-top: .85rem; }
 .profile-links a { font-size: .9rem; }
 .profile-links .icon { display: none; }
@@ -160,43 +160,24 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
 .actions .icon { display: none; }
 .actions a::after { content: "↓"; font-weight: 400; }
 
-/* Molecular structure, with caption on the paper outside the image */
+/* Molecular structure */
 .specimen { position: relative; width: 100%; max-width: 25.5rem; margin: .15rem 0 0 auto; }
-.specimen .structure { width: 100%; height: auto; aspect-ratio: 800 / 620; object-fit: contain; background: #0a1017; }
+.specimen .structure { width: 100%; height: auto; aspect-ratio: 800 / 620; object-fit: contain; background: #fff; }
 .specimen-head { position: absolute; z-index: 1; top: .55rem; right: .55rem; }
 .motion-toggle {
   display: grid;
   place-items: center;
   width: 2.35rem;
   height: 2.35rem;
-  border: 1px solid #677078;
+  border: 1px solid var(--line);
   border-radius: 50%;
   padding: 0;
-  background: #121c24;
-  color: #fff;
+  background: #fff;
+  color: var(--accent);
 }
-.motion-toggle:focus-visible { outline-color: #fff; }
+.motion-toggle:hover { border-color: var(--accent); }
 .motion-toggle[data-playing="true"] .icon:first-child,
 .motion-toggle:not([data-playing="true"]) .icon:last-child { display: none; }
-.specimen figcaption {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: .45rem .65rem;
-  padding-block: .75rem;
-  border-bottom: 1px solid var(--line);
-}
-.figure-title { font: 500 1rem/1.5 var(--serif); }
-.structure-source { font-size: .77rem; white-space: nowrap; }
-.legend { flex-basis: 100%; display: flex; align-items: center; gap: 1rem; color: var(--muted); font-size: .77rem; }
-.legend span { display: inline-flex; align-items: baseline; }
-.legend i { align-self: center; width: .52rem; height: .52rem; margin-right: .35rem; border-radius: 50%; }
-.legend sub { font-size: .7em; transform: translateY(.2em); }
-.legend .vl { background: #469c9e; }
-.legend .vh { background: #907db3; }
-.legend .antigen { background: #b18043; }
-
 /* Profile tabs */
 .profile-panel h3 { font: 600 1.08rem/1.5 var(--serif); margin: 0 0 .45rem; }
 .skill-list, .profile-highlights ul { padding-inline-start: 1.35rem; margin: 0; }
@@ -250,7 +231,7 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
   .affil { margin-top: .9rem; }
   .affil span { display: block; }
   .affil b { display: none; }
-  .profile-tabs { gap: .05rem 1rem; }
+  .profile-tabs { gap: .05rem clamp(.4rem, 2vw, .7rem); }
   .profile-panel .career-group dl > div { grid-template-columns: 1fr; gap: .1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -302,7 +283,7 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
   line-height: 1.8;
   overflow-wrap: anywhere;
 }
-.news-list a, .molecule-caption a {
+.news-list a {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: .2em;
@@ -477,20 +458,7 @@ footer { border-top: 1px solid var(--line); }
 }
 .project-hero p { max-width: 65ch; line-height: 1.9; }
 .project-visual img { display: block; width: 100%; height: auto; }
-.project-visual figcaption {
-  margin-top: .65rem;
-  color: var(--muted);
-  font-size: .84rem;
-  line-height: 1.65;
-}
-.molecule-caption {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: .1rem .8rem;
-}
-.molecule-name { color: var(--text); font-weight: 600; }
-.molecule-views { flex-basis: 100%; }
+.project-visual > a { display: block; }
 .related {
   padding-top: clamp(2rem, 4vw, 3rem);
   border-top: 1px solid var(--line);
