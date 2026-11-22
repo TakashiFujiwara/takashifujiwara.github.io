@@ -94,9 +94,9 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
 /* Profile */
 .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(0, .92fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   align-items: start;
-  gap: 2rem clamp(3rem, 6.5vw, 6.5rem);
+  gap: 2rem clamp(1.5rem, 3vw, 2.75rem);
   padding-block: clamp(2.75rem, 5vw, 4.9rem) clamp(2.65rem, 4.5vw, 4.5rem);
 }
 .hero-copy { min-width: 0; }
@@ -161,7 +161,11 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
 .actions a::after { content: "↓"; font-weight: 400; }
 
 /* Molecular structure */
-.specimen { position: relative; width: 100%; max-width: 25.5rem; margin: .15rem 0 0 auto; }
+.specimen {
+  position: relative;
+  width: 100%;
+  margin-block-start: clamp(3rem, 6.7vw, 6.25rem);
+}
 .specimen .structure { width: 100%; height: auto; aspect-ratio: 800 / 620; object-fit: contain; background: #fff; }
 .specimen-head { position: absolute; z-index: 1; top: .55rem; right: .55rem; }
 .motion-toggle {
@@ -206,6 +210,10 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
 .presentation-title { font-weight: 600; }
 .presentation-authors, .presentation-venue, .presentation-note { color: var(--muted); font-size: .88rem; margin-top: .15rem; }
 
+@media (min-width: 761px) and (max-width: 960px) {
+  .hero-inner { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+}
+
 /* Match the mobile navigation breakpoint in site.js. */
 @media (max-width: 760px) {
   html { scroll-padding-top: 4.5rem; }
@@ -217,7 +225,7 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
   #menu-toggle[aria-expanded="true"] .icon:first-child { display: none; }
   #mobile-nav:not([hidden]) { display: flex; flex-wrap: wrap; gap: .35rem 1.6rem; padding: 0 var(--gutter) .35rem; }
   .hero-inner { grid-template-columns: 1fr; padding-block: 2.2rem; gap: 1.75rem; }
-  .specimen { margin: 0; max-width: 24rem; }
+  .specimen { margin: 0 auto; max-width: 24rem; }
 }
 @media (max-width: 520px) {
   .brand { gap: .42rem; }
