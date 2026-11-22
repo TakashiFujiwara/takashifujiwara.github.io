@@ -408,6 +408,14 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
   aspect-ratio: 3 / 2;
   object-fit: contain;
 }
+.paper-figure {
+  display: block;
+  cursor: zoom-in;
+}
+.paper-figure .paper-thumb {
+  aspect-ratio: auto;
+  max-height: 9rem;
+}
 .paper-copy { max-width: 52rem; }
 .paper h3 {
   font: 500 clamp(1.22rem, 1.8vw, 1.5rem)/1.25 var(--serif);
@@ -504,7 +512,10 @@ footer { border-top: 1px solid var(--line); }
     padding-block: 1.4rem;
   }
   .paper-copy { display: contents; }
-  .paper-thumb { grid-area: 1 / 1; }
+  .paper-thumb, .paper-figure { grid-area: 1 / 1; }
+  .paper-figure-wide { grid-area: 1 / 1 / 2 / -1; }
+  .paper-figure-wide .paper-thumb { max-height: none; }
+  .paper-figure-wide + .paper-copy h3 { grid-area: 2 / 1 / 3 / -1; margin-top: .35rem; }
   .paper h3 { grid-area: 1 / 2; font-size: 1.15rem; }
   .paper .authors, .paper-meta, .paper-summary { grid-column: 1 / -1; margin: 0; }
   .paper .authors { margin-top: .25rem; }
